@@ -75,7 +75,7 @@ impl TreeLeaf {
                     String::from("|  ").repeat((depth - self.level) as usize) + "└--";
             }
             // └
-            println!("{}{:?}", connector_string, filename);
+            println!("{}{}", connector_string, filename);
 
             match entry.leaf_type {
                 LeafType::Dir => {
