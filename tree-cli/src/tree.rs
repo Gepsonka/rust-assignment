@@ -74,9 +74,10 @@ impl TreeLeaf {
                 connector_string =
                     String::from("|  ").repeat((depth - self.level) as usize) + "└--";
             }
-            // └
+
             println!("{}{}", connector_string, filename);
 
+            // recursion
             match entry.leaf_type {
                 LeafType::Dir => {
                     entry.render_tree(depth);
