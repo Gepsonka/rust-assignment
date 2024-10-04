@@ -57,7 +57,7 @@ impl TreeLeaf {
     }
 
     pub fn render_tree(&self, depth: u8) {
-        for (index, entry) in self.child_nodes.clone().iter().enumerate() {
+        for (index, entry) in self.child_nodes.iter().enumerate() {
             let split_path: Vec<_> = std::path::Path::new(entry.path.as_str())
                 .components()
                 .collect();
